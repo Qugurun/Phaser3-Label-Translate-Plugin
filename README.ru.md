@@ -1,3 +1,4 @@
+[![Page Views Count](https://badges.toozhao.com/badges/01HVBM4531H9T1EV6ZPZTH33N1/green.svg)](https://badges.toozhao.com/stats/01HVBM4531H9T1EV6ZPZTH33N1 "Get your own page views count badge on badges.toozhao.com")
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.ru.md)
 
@@ -127,9 +128,9 @@ console.log(label.getFitWidthEnabled());
 
 ```json
 {
-	"{settings}": "Настройки",
-    "{game}": "Игра",
-    "{exit}": "Выход"
+  "{settings}": "Settings",
+  "{game}": "Game",
+  "{exit}": "Exit"
 }
 ```
 
