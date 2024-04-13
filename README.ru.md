@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.ru.md)
+
 # Label Translate Plugin for Phaser 3.80.x
 
 Плагин добавляет автоматический перевод для текстовых элементов по {ключам} из их наличия в файлах `*.json` перевода.
@@ -121,6 +124,7 @@ console.log(label.getFitWidthEnabled());
 
 Файлы перевода имеют данный вид: 
 Имя файла - язык за который отвечает данный файл. "ru.json".
+
 ```json
 {
 	"{settings}": "Настройки",

@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/README.ru.md)
+
 # Label Translate Plugin for Phaser 3.80.x
 
 The plugin adds automatic translation for text elements based on `{keys}` from their presence in translation` *.json` files.
