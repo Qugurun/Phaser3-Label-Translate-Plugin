@@ -122,7 +122,7 @@ console.log(label.getFitWidthEnabled());
 ## Translation Files
 
 Translation files have the following format: 
-The file name is the language for which the file is responsible. "ru.json".
+The file name is the language for which the file is responsible. "en.json".
 
 ```json
 {
