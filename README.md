@@ -145,9 +145,9 @@ The name of the first column is important to be key, the names of the other colu
 
 | key        | ru        | en       |
 | ---------- | --------- | -------- |
-| {settings} | Settings  | Settings |
-| {game}     | Game      | Game     |
-| {exit}     | Exit      | Exit     |
+| {settings} | Настройки  | Settings |
+| {game}     | Игра      | Game     |
+| {exit}     | Выход      | Exit     |
 
 Example CSV file:
 
