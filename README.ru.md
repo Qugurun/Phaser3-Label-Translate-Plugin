@@ -124,13 +124,13 @@ console.log(label.getFitWidthEnabled());
 ## Файлы перевода
 
 Файлы перевода имеют данный вид: 
-Имя файла - язык за который отвечает данный файл. "en.json".
+Имя файла - язык за который отвечает данный файл. "ru.json".
 
 ```json
 {
-  "{settings}": "Settings",
-  "{game}": "Game",
-  "{exit}": "Exit"
+  "{settings}": "Настройки",
+  "{game}": "Игра",
+  "{exit}": "Выход"
 }
 ```
 
@@ -155,6 +155,8 @@ CSV файл имеет такой вид:
 [Пример таблицы](https://docs.google.com/spreadsheets/d/11lQEBhEIqXbmaXeNp7G18mlrq2J0pNZCpmwcyrIc_wk/edit?usp=sharing)
 
 Вы можете попытаться получить автоматический перевод через гугл таблицы, введя формулу:
+
+![google_table.gif](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/google_table.gif)
 
 Чтобы слова "не гуляли регистром".  
   

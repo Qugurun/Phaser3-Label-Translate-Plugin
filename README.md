@@ -155,6 +155,8 @@ Example CSV file:
 
 You can try to get an automatic translation using Google Sheets by entering the formula:
 
+![google_table.gif](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/google_table.gif)
+
 To prevent words from "jumping case".
 
 Capitalizes the first letter of each word.
