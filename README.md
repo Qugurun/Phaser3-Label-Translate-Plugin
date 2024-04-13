@@ -2,9 +2,7 @@
 
 The plugin adds automatic translation for text elements based on `{keys}` from their presence in translation` *.json` files.
 
-```markdown
-preview.gif
-```
+![priview.gif](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/preview.gif)
 
 Example:
 ```js
@@ -134,7 +132,7 @@ The file name is the language for which the file is responsible. "ru.json".
 
 Translation files can be obtained from a `*.csv` file by dragging it to the` CSV2JSON.py` script, and translation files in `*.json` format will appear next to the file.
 
-![CSV2JSON.gif (CSV2JSON.gif)]
+![CSV2JSON.gif](https://github.com/Qugurun/Phaser3-Label-Translate-Plugin/blob/main/CSV2JSON.gif)
 
 Python must be installed to successfully process the CSV file.
 
