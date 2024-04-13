@@ -2,7 +2,9 @@
 
 The plugin adds automatic translation for text elements based on `{keys}` from their presence in translation` *.json` files.
 
-![preview.gif (preview.gif)]
+```markdown
+preview.gif
+```
 
 Example:
 ```js
