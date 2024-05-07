@@ -1,6 +1,6 @@
 /**
  * Plugin for label translate in Phaser 3.80.x.
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Qugurun
  * License: MIT
 
@@ -38,9 +38,18 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
                 this.scene.__textObjects = [];
             }
             this.scene.__textObjects.push(object);
+            let __text = "";
+
+            if (Array.isArray(text)) {
+                for (const item of text) {
+                    __text += "\n" + item;
+                }
+            } else {
+                __text = text;
+            }
 
             object.__settings = {
-                text: text,
+                text: __text,
                 fontSize: object.style.fontSize,
                 isFitWidth: false,
                 fitWidthValue: 0,
@@ -53,7 +62,6 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
             object.setFitWidthEnabled = function (value) {
                 if (typeof value == "boolean") {
                     this.__settings.isFitWidth = value;
-
 
                     if (!value) {
                         this.setFontSize(this.__settings.fontSize);
@@ -82,15 +90,24 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
                         const newSize = (currentSize * value) / totalWidth;
                         this.setFontSize(newSize);
                     }
-
                 }
                 return this;
             }
 
             object.setTextKey = function (value) {
-                this.__settings.text = value;
+                let __text = "";
 
-                this.setText(plugin.getTranslate(value));
+                if (Array.isArray(value)) {
+                    for (const item of value) {
+                        __text += "\n" + item;
+                    }
+                } else {
+                    __text = value;
+                }
+
+                this.__settings.text = __text;
+
+                this.setText(plugin.getTranslate(__text));
 
                 if (this.__settings.isFitWidth) {
                     this.setFitWidth(this.__settings.fitWidthValue);
@@ -100,7 +117,6 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
             object.setTextKey(text)
 
             return object;
-
         }
     }
 
