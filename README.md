@@ -18,7 +18,7 @@ const label = this.add.label(0,0, "{key}", {fontSize: "50px"});
 
 Place and connect the file [label_translate_plugin.js](https://raw.githubusercontent.com/Qugurun/Phaser3-Label-Translate-Plugin/main/label_translate_plugin.js):
 ```js
-import { TextTranslatePlugin } from "./plugin/labeltranslateplugin";
+import { LabelTranslatePlugin } from "./plugin/labeltranslateplugin";
 ```
 
 Add to the configuration:
