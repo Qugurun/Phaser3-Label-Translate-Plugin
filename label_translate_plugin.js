@@ -1,8 +1,10 @@
 /**
  * Plugin for label translate in Phaser 3.80.x.
- * Version: 0.0.5
+ * Version: 0.0.6
  * Author: Qugurun
  * License: MIT
+ * 
+import { LabelTranslatePlugin } from "./plugins/label_translate_plugin";
 
 plugins: {
     global: [
@@ -18,7 +20,7 @@ plugins: {
     ]
 }
 
- */
+*/
 
 export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
     constructor(pluginManager) {
@@ -94,7 +96,8 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
                 return this;
             }
 
-            object.setTextKey = function (value) {
+            object._setTextOriginal = object.setText;
+            object.setText = function (value) {
                 let __text = "";
 
                 if (Array.isArray(value)) {
@@ -107,21 +110,14 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
 
                 this.__settings.text = __text;
 
-                this.setText(plugin.getTranslate(__text));
+                this._setTextOriginal(plugin.getTranslate(__text));
 
                 if (this.__settings.isFitWidth) {
                     this.setFitWidth(this.__settings.fitWidthValue);
                 }
             }
 
-            Object.defineProperty(object, 'text', {
-                set: (value) => {
-                    console.log("Translate Text plugin");
-                    object.setTextKey(value);
-                }
-            })
-
-            object.setTextKey(text)
+            object.setText(text)
 
             return object;
         }
@@ -156,7 +152,7 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
         this.game.scene.scenes.forEach(function (sceneObject) {
             if (sceneObject.__textObjects) {
                 for (const textObject of sceneObject.__textObjects) {
-                    textObject.setTextKey(textObject.__settings.text);
+                    textObject.setText(textObject.__settings.text);
                 }
             }
         });
