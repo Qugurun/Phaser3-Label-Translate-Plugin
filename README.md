@@ -99,7 +99,7 @@ Setting a new key.
 ```js
 label.text = "{myNewKey}";
 // or
-label.setTextKey("{myNewKey}");
+label.setText("{myNewKey}");
 ```
 
 Setting the maximum width of the text block in px.
