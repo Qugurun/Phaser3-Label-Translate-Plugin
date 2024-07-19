@@ -97,6 +97,8 @@ const label = this.add.label(0,0, "{key1} {key2}", {fontSize: "50px"});
 Установка нового ключа.
 
 ```js
+label.text = "{myNewKey}";
+// или
 label.setTextKey("{myNewKey}");
 ```
 
