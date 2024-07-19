@@ -97,6 +97,8 @@ const label = this.add.label(0,0, "{key1} {key2}", {fontSize: "50px"});
 Setting a new key.
 
 ```js
+label.text = "{myNewKey}";
+// or
 label.setTextKey("{myNewKey}");
 ```
 
