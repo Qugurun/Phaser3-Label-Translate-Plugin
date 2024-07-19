@@ -1,6 +1,6 @@
 /**
  * Plugin for label translate in Phaser 3.80.x.
- * Version: 0.0.4
+ * Version: 0.0.5
  * Author: Qugurun
  * License: MIT
 
@@ -113,6 +113,13 @@ export class LabelTranslatePlugin extends Phaser.Plugins.BasePlugin {
                     this.setFitWidth(this.__settings.fitWidthValue);
                 }
             }
+
+            Object.defineProperty(object, 'text', {
+                set: (value) => {
+                    console.log("Translate Text plugin");
+                    object.setTextKey(value);
+                }
+            })
 
             object.setTextKey(text)
 
