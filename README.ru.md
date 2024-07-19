@@ -99,7 +99,7 @@ const label = this.add.label(0,0, "{key1} {key2}", {fontSize: "50px"});
 ```js
 label.text = "{myNewKey}";
 // или
-label.setTextKey("{myNewKey}");
+label.setText("{myNewKey}");
 ```
 
 
