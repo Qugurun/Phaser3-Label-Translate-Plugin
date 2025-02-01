@@ -6,8 +6,13 @@ import os
 import csv
 import json
 
-csv_file_path = sys.argv[1]
-output_dir = os.path.dirname(csv_file_path)
+def find_csv_in_directory(directory):
+    for file_name in os.listdir(directory):
+        if file_name.endswith('.csv'):
+            return os.path.join(directory, file_name)
+    return None
+output_dir = os.path.dirname(os.path.abspath(__file__))
+csv_file_path = find_csv_in_directory(output_dir)
 
 def process_row(row):
     locales = {}
